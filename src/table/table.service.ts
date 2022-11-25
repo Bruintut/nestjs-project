@@ -6,7 +6,7 @@ import { Table } from './entities/table.entity';
 export class TableService {
   tables: Table[] = [];
   findAll() {
-    return 'Find All';
+    return this.tables;
   }
   create(createTableDto: CreateTableDto) {
     const table: Table = {id: 'random_id', ...createTableDto};
