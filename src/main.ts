@@ -1,3 +1,4 @@
+
 import { ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
@@ -12,6 +13,8 @@ async function bootstrap() {
   .setTitle('Api-NestJs')
   .setDescription('Aplicação para gestão de mesas')
   .setVersion('1.0.0')
+  .addTag('status')
+  .addTag('table')
   .build();
 
   const document = SwaggerModule.createDocument(app, config);
